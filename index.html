@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Catch Eggs</title>
+
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/game.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
+  <link rel="stylesheet" href="assets/css/loadingIndicator.css">
+</head>
+
+<body>
+  <div class="game-main-screen">
+    <div id="welcomePanel">
+      <div>
+        <p class="game-title">
+          Welcome
+        </p>
+        <span class="animated-text">
+          Catching<br>Eggs
+        </span>
+        <div class="name-input">
+          <input type="text" name="userName" placeholder="Your Name">
+        </div>
+        <button id="enterGameBtn" class="game-btn sound-1">Enter</button>
+      </div>
+    </div>
+
+    <div id="mainMenu">
+      <div class="top-controls">
+        <img id="backToWelcome" class="wooden-button-l sound-2" src="./assets/images/buttons/button_back.png"
+          alt="Back Button">
+        <img id="soundButton" class="wooden-button-r sound-2" src="./assets/images/buttons/sound_on.png"
+          alt="Back Button">
+      </div>
+      <div class="middle-container">
+        <p class="game-title-big">Catching Eggs</p>
+        <br>
+        <p class="user-name">User Name</p>
+        <br>
+        <button id="startPlaying" class="game-btn sound-1">Start</button>
+        <br>
+        <button class="game-btn sound-1">Scores</button>
+      </div>
+    </div>
+
+    <div id="gameScreen">
+      <div class="game-play">
+        <!-- <img class="game-egg" src="./assets/images/objects/object_012_egg.png"> -->
+        <img class="game-basket" src="./assets/images/objects/object_001_basket.png">
+      </div>
+      <div class="top-controls">
+        <img id="gameMenuButton" class="wooden-button-l sound-2" src="./assets/images/buttons/button_menu.png"
+          alt="Back Button" style="float: left;">
+        <div class="left-top">
+          <p id="playerName">Ahmed</p>
+          <p id="lastGameDate">Date</p>
+        </div>
+        <p id="timerCounter">00:00</p>
+        <div class="score-panel">
+          <p>Level: <span id="gameLevel">1</span></p>
+          <p>Target: <span id="gameTarget">20</span></p>
+          <p>Score: <span id="gameScore">5</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loadingIndicator">
+    <div>
+      <div class="circle circle4 c41"></div>
+      <div class="circle circle4 c42"></div>
+      <div class="circle circle4 c43"></div>
+      <div class="circle circle4 c44"></div>
+      <p class="game-title" style="margin-top: 200px;">Loading...</p>
+    </div>
+  </div>
+
+  <!-- [Start] Alert Modal [Start] -->
+  <div id="alertModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close sound-1">&times;</span>
+        <p>Modal Header</p>
+      </div>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+  <!-- [End] Alert Modal [End] -->
+
+  <!-- [Start] Pause Modal [Start] -->
+  <div id="gamePauseMenu" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <p>Paused</p>
+      </div>
+      <div class="modal-body">
+        <button class="continue game-btn btn-wide sound-1">Continue</button>
+        <button class="restart game-btn btn-wide sound-1">Restart</button>
+        <button class="home game-btn btn-wide sound-1">Home</button>
+      </div>
+    </div>
+  </div>
+  <!-- [End] Pause Modal [End] -->
+
+  <!-- [Start] Score Modal [Start] -->
+  <div id="gameScoreWindow" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <p>Great</p>
+      </div>
+      <div class="modal-body">
+        <div class="loser">
+          <img class="sad-emoji" src="./assets/images/sad_emoji.png" alt="">
+        </div>
+        <div class="winner">
+          <img class="rate-star-1" src="./assets/images/golden_star.png">
+          <img class="rate-star-2" src="./assets/images/golden_star.png">
+          <img class="rate-star-1" src="./assets/images/golden_star.png">
+        </div>
+        <button class="next game-btn btn-wide sound-1">Next Level</button>
+        <button class="restart game-btn btn-wide sound-1">Restart</button>
+        <button class="home game-btn btn-wide sound-1">Home</button>
+      </div>
+    </div>
+  </div>
+  <!-- [End] Score Modal [End] -->
+
+  <script type="module" src="assets/scripts/Game.js"></script>
+</body>
+
+</html>
